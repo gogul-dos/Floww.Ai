@@ -9,6 +9,9 @@ app.use(bodyParser.json());
 
 app.use("/api", transactionRoutes);
 app.use("/api", summaryRoutes);
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 
 app.use(errorHandler);
 
